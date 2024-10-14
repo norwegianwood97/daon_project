@@ -209,7 +209,7 @@ img.main-image {
   justify-content: space-between; /* 텍스트와 버튼 사이 간격 설정 */
   align-items: center; /* 텍스트와 버튼을 중앙 정렬 */
   width: 100%;
-  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .map-text {
