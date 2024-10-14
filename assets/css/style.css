@@ -36,12 +36,14 @@ nav ul li {
   min-width: 100px; /* 항목들이 일정 크기 이상을 유지하도록 설정 */
 }
 
+
 /* ---------------------------bottom-banner.html-------------------------------------- */
 .bottom-banner {
   position: relative;
   background: #333;
   font-family: "MalGun Gothic", 맑은고딕, dotum;
 }
+
 .bottom_nav {
   position: fixed;
   bottom: 20px;
@@ -52,17 +54,15 @@ nav ul li {
   display: none;
 }
 
-.bottom-row1 {
-  border-bottom: 1px solid #484848;
-}
-.bottom-row2 {
-  margin-top: 5px;
+.bottom-row {
   position: relative;
   width: 1000px;
   margin: 0 auto;
-  padding-bottom: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px; /* bottom-row2 상단에 불필요한 여백 제거 */
 }
-.bottom-row2-inline {
+
+.bottom-row-inline {
   font-size: 16px;
   color: #999;
   line-height: 1.8;
@@ -70,10 +70,12 @@ nav ul li {
   padding-left: 275px;
   overflow: hidden;
 }
-.bottom-row2-inline strong {
+
+.bottom-row-inline strong {
   color: white;
   font-size: 19px;
 }
+
 
 /* ---------------------------index.html-메인페이지------------------------------------- */
 /* 메인 이미지가 열 전체를 차지하도록 설정 */
