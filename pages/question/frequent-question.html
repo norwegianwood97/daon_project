@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다온 입시컨설팅센터</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <!-- 이미지 출력 -->
+    <img
+      src="../../assets/images/question/main_image.png"
+      alt="Center Description"
+      class="center-description-image"
+    />
+
+    <div>
+      <ul class="highschool-consulting-selection">
+        <li class="selected">
+          <a href="frequent-question.html">
+            <span>
+              <em>자주 묻는 질문</em>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="question_area">
+      <ul class="question_list">
+        <li>
+          <a class="question" style="cursor: pointer">
+            <span>
+              <strong>Q</strong>. 학생생활기록부는 어떻게 발급하나요?
+            </span>
+          </a>
+
+          <div class="faq_con">
+            <div class="txt_box">
+              1. 정부24 홈페이지에 들어갑니다. <br />
+              2. 용도에 맞는 생활기록부를 발급합니다.<br />
+              <br />
+              <a
+                href="https://www.gov.kr/search?srhQuery=%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EB%B6%80"
+                target="_blank"
+                class="btn-link"
+                >정부24 바로가기</a
+              >
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="question" style="cursor: pointer">
+            <span> <strong>Q</strong>. 주차장이 있나요?</span>
+          </a>
+          <div class="faq_con">
+            <div class="txt_box">
+              SUV차량을 포함하여 지하 3층까지 주차가 가능합니다.<br />
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="question" style="cursor: pointer">
+            <span> <strong>Q</strong>. 서류를 제출하지 않아도 되나요?</span>
+          </a>
+          <div class="faq_con">
+            <div class="txt_box">
+              내용1<br />
+              내용2<br />
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="question" style="cursor: pointer">
+            <span> <strong>Q</strong>. 취소 및 환불 방법</span>
+          </a>
+          <div class="faq_con">
+            <div class="txt_box">
+              내용1<br />
+              내용2<br />
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="question" style="cursor: pointer">
+            <span> <strong>Q</strong>. 온라인 컨설팅도 가능한가요?</span>
+          </a>
+          <div class="faq_con">
+            <div class="txt_box">
+              내용1<br />
+              내용2<br />
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="question" style="cursor: pointer">
+            <span> <strong>Q</strong>. 예체능계열도 컨설팅이 가능한가요?</span>
+          </a>
+          <div class="faq_con">
+            <div class="txt_box">
+              내용1<br />
+              내용2<br />
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="question" style="cursor: pointer">
+            <span>
+              <strong>Q</strong>. 당일에 예약해도 컨설팅이 가능한가요?</span
+            >
+          </a>
+          <div class="faq_con">
+            <div class="txt_box">
+              내용1<br />
+              내용2<br />
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <img
+      id="faq-image1"
+      src="../../assets/images/question/1.PNG"
+      alt="FAQ Image1"
+      class="faq-image1"
+    />
+
+    <div id="bottom-banner"></div>
+
+    <script>
+      // navbar.html을 불러오는 fetch는 그대로 유지
+      fetch("../../components/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+
+      // bottom-banner.html을 불러오고, 스크롤 이벤트 및 클릭 이벤트 추가
+      fetch("../../components/bottom-banner.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("bottom-banner").innerHTML = data;
+
+          // bottom-banner가 로드된 후에 클릭 및 스크롤 이벤트를 추가
+          const bottomNav = document.getElementById("bottomNav");
+
+          if (!bottomNav) {
+            console.error("이미지를 찾을 수 없습니다.");
+          } else {
+            console.log("이미지 요소를 찾았습니다.");
+
+            // 클릭 이벤트 리스너 추가
+            bottomNav.addEventListener("click", function () {
+              console.log("이미지 클릭됨");
+              window.scrollTo({
+                top: 0, // 최상단 위치
+                behavior: "smooth", // 부드럽게 스크롤
+              });
+            });
+
+            // 스크롤 이벤트 추가: 스크롤 위치에 따라 bottomNav 표시/숨김
+            window.onscroll = function () {
+              if (window.scrollY > 100) {
+                bottomNav.style.display = "block"; // 스크롤이 일정 수준 넘으면 보이게 설정
+              } else {
+                bottomNav.style.display = "none"; // 상단에 있을 땐 숨김
+              }
+            };
+
+            // 페이지 로드 시 상단에 있으면 이미지를 숨김
+            if (window.scrollY <= 100) {
+              bottomNav.style.display = "none";
+            }
+          }
+        })
+        .catch((error) => console.error("Bottom banner fetch error:", error));
+    </script>
+
+    <!-- Add your JavaScript here -->
+    <script>
+      // Select all the question elements
+      const questions = document.querySelectorAll(".question");
+
+      questions.forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqContent = question.nextElementSibling;
+
+          // Toggle the display of the faq content
+          if (faqContent.style.display === "block") {
+            faqContent.style.display = "none";
+          } else {
+            faqContent.style.display = "block";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

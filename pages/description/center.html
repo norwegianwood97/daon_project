@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다온 입시컨설팅센터</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <!-- 이미지 출력 -->
+    <img
+      src="../../assets/images/center_description/main_image.PNG"
+      alt="Center Description"
+      class="center-description-image"
+    />
+
+    <div>
+      <ul class="highschool-consulting-selection">
+        <li class="selected">
+          <a href="center.html">
+            <span>
+              <em>센터 소개</em>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="map.html">
+            <span>
+              <em>오시는 길</em>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="bottom-banner"></div>
+
+    <script>
+      // navbar.html을 불러오는 fetch는 그대로 유지
+      fetch("../../components/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+
+      // bottom-banner.html을 불러오고, 스크롤 이벤트 및 클릭 이벤트 추가
+      fetch("../../components/bottom-banner.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("bottom-banner").innerHTML = data;
+
+          // bottom-banner가 로드된 후에 클릭 및 스크롤 이벤트를 추가
+          const bottomNav = document.getElementById("bottomNav");
+
+          if (!bottomNav) {
+            console.error("이미지를 찾을 수 없습니다.");
+          } else {
+            console.log("이미지 요소를 찾았습니다.");
+
+            // 클릭 이벤트 리스너 추가
+            bottomNav.addEventListener("click", function () {
+              console.log("이미지 클릭됨");
+              window.scrollTo({
+                top: 0, // 최상단 위치
+                behavior: "smooth", // 부드럽게 스크롤
+              });
+            });
+
+            // 스크롤 이벤트 추가: 스크롤 위치에 따라 bottomNav 표시/숨김
+            window.onscroll = function () {
+              if (window.scrollY > 100) {
+                bottomNav.style.display = "block"; // 스크롤이 일정 수준 넘으면 보이게 설정
+              } else {
+                bottomNav.style.display = "none"; // 상단에 있을 땐 숨김
+              }
+            };
+
+            // 페이지 로드 시 상단에 있으면 이미지를 숨김
+            if (window.scrollY <= 100) {
+              bottomNav.style.display = "none";
+            }
+          }
+        })
+        .catch((error) => console.error("Bottom banner fetch error:", error));
+    </script>
+  </body>
+</html>

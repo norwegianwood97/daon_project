@@ -1,0 +1,420 @@
+/* ---------------------------navbar.html-------------------------------------- */
+nav {
+  background-color: #ffffff;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center; /* 세로 정렬 */
+  justify-content: space-between; /* 양쪽 끝에 요소 정렬 */
+  flex-wrap: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
+  max-width: 100%; /* 화면 너비에 맞춰 조정 */
+  border-bottom: 2px solid #dadada; /* 하단에 선 추가 */
+}
+
+/* 네비게이션 바 왼쪽에 이미지를 배치 */
+.navbar-logo {
+  width: auto; /* 이미지 크기 조정 */
+  height: 50px; /* 비율 유지하면서 크기 조정 */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center; /* nav ul은 중앙에 배치 */
+  flex-wrap: nowrap; /* 항목들이 줄바꿈되지 않도록 설정 */
+}
+
+nav ul li {
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* 항목들이 왼쪽에 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  margin: 0 2vw; /* 각 항목들 사이에 비율 기반 간격 추가 */
+  min-width: 100px; /* 항목들이 일정 크기 이상을 유지하도록 설정 */
+}
+
+/* ---------------------------bottom-banner.html-------------------------------------- */
+.bottom-banner {
+  position: relative;
+  background: #333;
+  font-family: "MalGun Gothic", 맑은고딕, dotum;
+}
+.bottom_nav {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999; /* 다른 요소들 위에 표시되도록 z-index를 더 높임 */
+  width: 150px;
+  height: auto;
+  display: none;
+}
+
+.bottom-row1 {
+  border-bottom: 1px solid #484848;
+}
+.bottom-row2 {
+  margin-top: 5px;
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.bottom-row2-inline {
+  font-size: 16px;
+  color: #999;
+  line-height: 1.8;
+  font-weight: normal;
+  padding-left: 275px;
+  overflow: hidden;
+}
+.bottom-row2-inline strong {
+  color: white;
+  font-size: 19px;
+}
+
+/* ---------------------------index.html-메인페이지------------------------------------- */
+/* 메인 이미지가 열 전체를 차지하도록 설정 */
+img.main-image {
+  height: auto; /* 비율을 유지하며 높이 자동 조정 */
+  max-height: 50vh; /* 최대 높이를 뷰포트 높이의 50%로 설정 */
+}
+
+.menu-item > a {
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  padding: 10px 2vw; /* 창 크기에 비례하는 패딩 */
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  height: 100%; /* 부모 요소의 높이를 상속받아 텍스트 중앙 배치 */
+  white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
+}
+
+.menu-item > a:hover {
+  background-color: #ffffff;
+}
+
+/* 서브메뉴 숨기기 */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  padding: 0;
+}
+
+/* 서브메뉴 보이기 */
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  display: flex;
+  justify-content: flex-start; /* 수평 왼쪽 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  padding: 10px;
+}
+
+.submenu li a {
+  display: flex;
+  justify-content: flex-start; /* 수평 왼쪽 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  width: 100%;
+}
+
+.submenu li a:hover {
+  background-color: #ffffff;
+}
+
+/* sorting 이미지 */
+.navbar-sorting {
+  width: 60px;
+  height: auto;
+  margin-left: 2vw; /* 창 크기에 비례하는 간격 */
+}
+
+/* 작은 화면(모바일) 대응 */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* 작은 화면에서는 세로로 정렬 */
+  }
+
+  nav ul {
+    flex-direction: column; /* 메뉴 항목을 세로로 나열 */
+  }
+
+  .navbar-logo {
+    margin-right: 0; /* 로고와 메뉴 간의 간격 제거 */
+    margin-bottom: 10px; /* 로고와 메뉴 간의 아래 간격 추가 */
+  }
+
+  .navbar-sorting {
+    margin-left: 0; /* 정렬 아이콘과 메뉴 간의 간격 제거 */
+    margin-top: 10px; /* 메뉴 항목 아래에 간격 추가 */
+  }
+
+  /* 메인 이미지의 크기 줄이기 */
+  img.main-image {
+    max-height: 30vh; /* 화면이 작아질 때 메인 이미지의 최대 높이를 30vh로 설정 */
+  }
+}
+
+/* ---------------------------map.html-------------------------------------- */
+.center-description-image {
+  width: 100%; /* 가로 화면에 꽉 차게 설정 */
+  height: auto; /* 이미지 비율을 유지하면서 자동으로 높이 조정 */
+  display: block; /* 이미지 아래의 불필요한 여백 제거 */
+  justify-content: center;
+}
+
+/* 오시는 길 페이지 */
+.map-page-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+/* map-container에서 Flexbox로 중앙 정렬 설정 */
+.map-container {
+  display: flex;
+  flex-direction: column; /* 세로로 배치 */
+  align-items: center; /* 수평 중앙 정렬 */
+  margin: 0 auto;
+  width: 80%; /* 컨테이너의 고정된 너비 설정 */
+  max-width: 1200px; /* 최대 너비 설정 */
+}
+
+/* map-page 이미지 */
+.map-image {
+  width: 100%; /* 이미지가 열 전체를 차지하도록 설정 */
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px; /* 이미지 아래에 간격 추가 */
+}
+
+/* map-info의 레이아웃 설정 */
+.map-info {
+  display: flex;
+  justify-content: space-between; /* 텍스트와 버튼 사이 간격 설정 */
+  align-items: center; /* 텍스트와 버튼을 중앙 정렬 */
+  width: 100%;
+  margin-top: 20px;
+}
+
+.map-text {
+  display: flex;
+  flex-direction: column; /* 주소와 전화번호를 세로로 배치 */
+  justify-content: flex-start;
+}
+
+.map-address,
+.map-tel {
+  margin: 3px; /* 기본 마진 제거 */
+}
+
+/* map-button 스타일 */
+.map-button {
+  display: inline-block;
+  background-color: #2368dd; /* 파란색 배경 */
+  color: #ffffff; /* 흰색 글씨 */
+  padding: 15px 30px; /* 버튼의 상하 좌우 패딩 추가 */
+  font-weight: bold; /* 굵은 글씨 */
+  text-align: center;
+  border-radius: 8px; /* 모서리를 둥글게 */
+  text-decoration: none; /* 링크의 기본 밑줄 제거 */
+  font-size: 18px; /* 글자 크기 설정 */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 버튼의 그림자 추가 */
+}
+
+.map-button a {
+  color: #ffffff; /* 버튼 안의 링크 글씨 색상 */
+  text-decoration: none; /* 링크의 밑줄 제거 */
+}
+
+.map-button:hover {
+  background-color: #1e5bb3; /* 호버 시 약간 어두운 파란색 */
+}
+
+/* ----highschool---------------entrance.html-------------------------------------- */
+em {
+  font-style: normal; /* 이탤릭 스타일을 정자로 변경 */
+}
+
+.highschool-consulting-selection {
+  list-style: none; /* 목록 앞의 점 제거 */
+  padding: 0;
+  margin: 0;
+  display: flex; /* 항목들을 가로로 정렬 */
+  justify-content: space-around; /* 항목들 사이의 공간을 균등하게 분배 */
+  border-bottom: 2px solid #dadada; /* 하단에 선 추가 */
+  font-family: Arial, sans-serif;
+  font-weight: bold; /* 글씨를 굵게 */
+  margin-bottom: 10px;
+}
+
+.highschool-consulting-selection li {
+  padding: 15px 20px;
+  position: relative;
+  font-size: 16px;
+  text-align: center;
+}
+
+.highschool-consulting-selection li a {
+  color: #000000; /* 기본 검정색 */
+  text-decoration: none;
+}
+
+.highschool-consulting-selection li.selected a {
+  color: #2368dc; /* 현재 선택된 항목을 파란색으로 */
+}
+
+.highschool-consulting-selection li a:hover {
+  color: #0a58ca; /* 항목을 hover할 때 색상 변화 */
+}
+
+/* 현재 선택된 항목을 강조하는 스타일 */
+.highschool-consulting-selection li.selected {
+  border-bottom: 3px solid #2368dc; /* 선택된 항목의 하단 강조 */
+}
+
+/* ---highschool---*/
+/*----------------------self-intrance.html----------------------- */
+
+/* 이미지 컨테이너를 세로로 중앙 정렬 */
+.self-intro-image-container {
+  display: flex;
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 20px; /* 이미지 간의 간격 */
+  margin: 20px 0; /* 페이지 상단과 하단 여백 */
+}
+
+.self-intro-image2,
+.self-intro-image4 {
+  margin-bottom: 200px;
+}
+
+/* 이미지 크기 조정 */
+.self-img {
+  height: auto; /* 이미지 비율 유지 */
+}
+
+/*----------------------interview.html----------------------- */
+
+/* 이미지 컨테이너를 세로로 중앙 정렬 */
+.body-image-container {
+  display: flex;
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 20px; /* 이미지 간의 간격 */
+  margin: 20px 0; /* 페이지 상단과 하단 여백 */
+}
+
+.body-image2,
+.body-image4 {
+  margin-bottom: 200px;
+}
+
+/* 이미지 크기 조정 */
+.body-img {
+  height: auto; /* 이미지 비율 유지 */
+}
+
+/* ---university---*/
+/*----------------------record-analysis.html----------------------- */
+
+/* 이미지 컨테이너를 세로로 중앙 정렬 */
+.record-analysis-container {
+  display: flex;
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 20px; /* 이미지 간의 간격 */
+  margin: 20px 0; /* 페이지 상단과 하단 여백 */
+}
+
+.record-analysis-image2,
+.record-analysis-image4 {
+  margin-bottom: 200px;
+}
+
+/* 이미지 크기 조정 */
+.record-analysis-img {
+  height: auto; /* 이미지 비율 유지 */
+}
+
+/* ---------------------------frequent-question.html-------------------------------------- */
+.question_area {
+  width: 80%; /* Set a width value */
+  max-width: 1200px; /* Optional: Set a max width to limit the size */
+  margin: 0 auto; /* This will center the element horizontally */
+}
+
+.question_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.question_list li {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.question {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  color: #000000; /* Color for the questions */
+  text-decoration: none;
+}
+
+.question strong {
+  color: #0a58ca;
+}
+
+.question_img {
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.faq_con {
+  display: none; /* Initially hidden */
+  margin-top: 10px;
+}
+
+.txt_box {
+  font-size: 18px;
+  padding: 10px;
+  padding-left: 40px; /* 왼쪽에서 20px 간격 */
+  background-color: #f9f9f9;
+  border-left: 4px solid #3c4ffd;
+  color: #333;
+  text-align: left; /* 기본 왼쪽 정렬 */
+}
+
+.question:hover {
+  text-decoration: underline;
+}
+
+.faq-image1 {
+  /* 화면 중앙에 출력 */
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}

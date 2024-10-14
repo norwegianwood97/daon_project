@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>다온 입시컨설팅센터</title>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <img
+      src="/assets/images/main_image.PNG"
+      alt="Main Image"
+      class="main-image"
+    />
+    <h1>다온입시컨설팅</h1>
+
+    <div id="bottom-banner"></div>
+
+    <script>
+      // navbar.html을 동적으로 불러오기
+      fetch("components/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+    <script>
+      fetch("../../components/bottom-banner.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("bottom-banner").innerHTML = data;
+        })
+        .catch((error) => console.error("Bottom banner fetch error:", error));
+    </script>
+  </body>
+</html>
