@@ -1,3 +1,19 @@
+html, body {
+  min-height: 100%; /* 페이지 전체가 화면 높이를 차지하도록 설정 */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  flex-grow: 1; /* 콘텐츠가 중간 영역을 채우도록 설정 */
+}
+
+
 /* ---------------------------navbar.html-------------------------------------- */
 nav {
   background-color: #ffffff;
@@ -39,10 +55,15 @@ nav ul li {
 
 /* ---------------------------bottom-banner.html-------------------------------------- */
 .bottom-banner {
-  position: relative;
+  position: relative; /* 고정하지 않고, 페이지 하단에 자연스럽게 위치 */
+  width: 100%; /* 화면 너비에 맞춤 */
   background: #333;
   font-family: "MalGun Gothic", 맑은고딕, dotum;
+  padding: 20px 0; /* 상하단 여백 추가 */
+  color: white;
 }
+
+
 
 .bottom_nav {
   position: fixed;
@@ -402,4 +423,18 @@ em {
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
+}
+
+.qa-link{
+  display: inline-block; /* 버튼처럼 블록 영역 차지 */
+  padding: 10px 20px; /* 버튼 내부 여백 (위아래 10px, 좌우 20px) */
+  background-color: #2368dd; /* 배경색 설정 (파란색) */
+  color: white; /* 텍스트 색상 흰색 */
+  text-decoration: none; /* 밑줄 제거 */
+  border-radius: 5px; /* 모서리 둥글게 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.qa-link:hover{
+   background-color: #1e5bb3; /* 호버 시 배경색 변경 */
 }
