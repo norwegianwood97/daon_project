@@ -170,7 +170,7 @@ img.main-image {
 }
 
 /* ---------------------------map.html-------------------------------------- */
-.center-description-image {
+.page-description-image {
   width: 100%; /* 가로 화면에 꽉 차게 설정 */
   height: auto; /* 이미지 비율을 유지하면서 자동으로 높이 조정 */
   display: block; /* 이미지 아래의 불필요한 여백 제거 */
@@ -246,12 +246,12 @@ img.main-image {
   background-color: #1e5bb3; /* 호버 시 약간 어두운 파란색 */
 }
 
-/* ----highschool---------------entrance.html-------------------------------------- */
+/* ------------------- highschool/university -------------------------------------- */
 em {
   font-style: normal; /* 이탤릭 스타일을 정자로 변경 */
 }
 
-.highschool-consulting-selection {
+.consulting-list {
   list-style: none; /* 목록 앞의 점 제거 */
   padding: 0;
   margin: 0;
@@ -263,55 +263,30 @@ em {
   margin-bottom: 10px;
 }
 
-.highschool-consulting-selection li {
+.consulting-list li {
   padding: 15px 20px;
   position: relative;
   font-size: 16px;
   text-align: center;
 }
 
-.highschool-consulting-selection li a {
+.consulting-list li a {
   color: #000000; /* 기본 검정색 */
   text-decoration: none;
 }
 
-.highschool-consulting-selection li.selected a {
+.consulting-list li.selected a {
   color: #2368dc; /* 현재 선택된 항목을 파란색으로 */
 }
 
-.highschool-consulting-selection li a:hover {
+.consulting-list li a:hover {
   color: #0a58ca; /* 항목을 hover할 때 색상 변화 */
 }
 
 /* 현재 선택된 항목을 강조하는 스타일 */
-.highschool-consulting-selection li.selected {
+.consulting-list li.selected {
   border-bottom: 3px solid #2368dc; /* 선택된 항목의 하단 강조 */
 }
-
-/* ---highschool---*/
-/*----------------------self-intrance.html----------------------- */
-
-/* 이미지 컨테이너를 세로로 중앙 정렬 */
-.self-intro-image-container {
-  display: flex;
-  flex-direction: column; /* 세로 방향으로 정렬 */
-  justify-content: center; /* 가로 중앙 정렬 */
-  align-items: center; /* 세로 중앙 정렬 */
-  gap: 20px; /* 이미지 간의 간격 */
-  margin: 20px 0; /* 페이지 상단과 하단 여백 */
-}
-
-.self-intro-image2,
-.self-intro-image4 {
-  margin-bottom: 200px;
-}
-
-/* 이미지 크기 조정 */
-.self-img {
-  height: auto; /* 이미지 비율 유지 */
-}
-
-/*----------------------interview.html----------------------- */
 
 /* 이미지 컨테이너를 세로로 중앙 정렬 */
 .body-image-container {
@@ -323,36 +298,38 @@ em {
   margin: 20px 0; /* 페이지 상단과 하단 여백 */
 }
 
+.body-image1{
+  border-bottom: 2px solid #dadada;
+}
+
 .body-image2,
-.body-image4 {
-  margin-bottom: 200px;
+.body-image3,
+.body-image5,
+.body-image6{
+  margin-bottom: 10px;
+}
+
+.body-image4{
+  margin-bottom: -150px;
+}
+
+.record-management-body-image1{
+  border-bottom: 2px solid #dadada;
+}
+
+.record-management-body-image2,
+.record-management-body-image3,
+.record-management-body-image4,
+.record-management-body-image6{
+  margin-bottom: 10px;
+}
+
+.record-management-body-image5{
+  margin-bottom: -150px;
 }
 
 /* 이미지 크기 조정 */
 .body-img {
-  height: auto; /* 이미지 비율 유지 */
-}
-
-/* ---university---*/
-/*----------------------record-analysis.html----------------------- */
-
-/* 이미지 컨테이너를 세로로 중앙 정렬 */
-.record-analysis-container {
-  display: flex;
-  flex-direction: column; /* 세로 방향으로 정렬 */
-  justify-content: center; /* 가로 중앙 정렬 */
-  align-items: center; /* 세로 중앙 정렬 */
-  gap: 20px; /* 이미지 간의 간격 */
-  margin: 20px 0; /* 페이지 상단과 하단 여백 */
-}
-
-.record-analysis-image2,
-.record-analysis-image4 {
-  margin-bottom: 200px;
-}
-
-/* 이미지 크기 조정 */
-.record-analysis-img {
   height: auto; /* 이미지 비율 유지 */
 }
 
@@ -406,6 +383,12 @@ em {
   border-left: 4px solid #3c4ffd;
   color: #333;
   text-align: left; /* 기본 왼쪽 정렬 */
+}
+
+.icon_number1,
+.icon_number2{
+  width:16px;
+  height:16px;
 }
 
 .question:hover {
