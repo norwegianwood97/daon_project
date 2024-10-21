@@ -23,7 +23,6 @@ nav {
   justify-content: space-between;
   flex-wrap: nowrap;
   max-width: 100%;
-  border-bottom: 2px solid #dadada;
 }
 
 /* 네비게이션 바 로고 설정 */
@@ -69,7 +68,6 @@ nav ul li a:hover {
 
 .menu-item :hover {
   color: rgb(9, 93, 250);
-  border-bottom: 2px solid rgb(9, 93, 250); /* 호버 시 밑줄 추가 */
 }
 
 /* 서브메뉴 스타일 */
