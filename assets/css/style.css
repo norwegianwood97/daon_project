@@ -13,6 +13,14 @@ body {
   flex-grow: 1; /* 콘텐츠가 중간 영역을 채우도록 설정 */
 }
 
+img {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: block; /* 이미지 아래의 여백을 제거하기 위해 block으로 설정 */
+}
+
+
 /* ---------------------------navbar.html-------------------------------------- */
 nav {
   background-color: #ffffff;
