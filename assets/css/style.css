@@ -7,11 +7,23 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  padding-top:70px;
 }
 
 #content {
   flex-grow: 1; /* 콘텐츠가 중간 영역을 채우도록 설정 */
 }
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* 다른 요소들 위에 출력되도록 */
+  background-color: white; /* 백그라운드 색상을 추가하여 페이지 내용과 구분 */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 조금 더 보기 좋게 그림자 추가 */
+}
+
 
 img {
   margin: 0;
@@ -38,6 +50,7 @@ nav {
   width: auto;
   height: 50px;
 }
+
 
 nav ul {
   list-style-type: none;
@@ -204,22 +217,21 @@ nav ul li a:hover {
 }
 
 .left-column {
-  font-size: 19px;
   color: white;
   font-weight: bold;
-  width: 30%; /* 원하는 너비 설정 */
+  width: 25%; /* 원하는 너비 설정 */
 }
 
 .right-column {
   font-size: 16px;
   color: #999;
   line-height: 1.8;
-  width: 70%; /* 원하는 너비 설정 */
+  width: 75%; /* 원하는 너비 설정 */
 }
 
 .bottom-row-flex strong {
   color: white;
-  font-size: 19px;
+  font-size: 22px;
 }
 
 
