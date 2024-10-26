@@ -610,6 +610,11 @@ em {
   margin: 20px 0; /* 페이지 상단과 하단 여백 */
 }
 
+.body-image-container{
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .body-image1,
 .record-management-body-image1{
   border-bottom: 2px solid #3d3d3d;
@@ -631,12 +636,40 @@ em {
   margin-bottom: -150px;
 }
 
-
-
-/* 이미지 크기 조정 */
-.body-img {
-  height: auto; /* 이미지 비율 유지 */
+.body-name{
+  text-align: center; /* 텍스트를 중앙 정렬 */
+  padding: 20px; /* 여백을 추가하여 보기 좋게 만듦 */
 }
+
+.body-name h1{
+  font-size: 40px; /* 제목의 크기를 설정 */
+}
+
+.body-name p{
+  font-size: 24px; /* 본문의 크기를 설정 */
+}
+
+
+.body-image-temp5 {
+  display: flex; /* 플렉스박스를 사용하여 요소를 가로로 배치 */
+  align-items: center; /* 이미지와 텍스트를 수직 가운데 정렬 */
+}
+
+
+.body-image-temp5 body-img2 {
+  display: inline-block;
+  width: 100px; /* 이미지에 고정된 너비 설정 */
+  margin-right: 10px; /* 이미지와 텍스트 사이 간격 */
+}
+
+.body-image-temp5 h2 {
+  display: inline-block;
+  width: 300px; /* 텍스트에 고정된 너비 설정 */
+  white-space: nowrap; /* 텍스트가 한 줄로 출력되도록 설정 */
+  text-align: left; /* 텍스트를 왼쪽 정렬 */
+}
+
+
 
 /* ---------------------------frequent-question.html-------------------------------------- */
 .question_area {
