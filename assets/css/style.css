@@ -608,32 +608,8 @@ em {
   align-items: center; /* 세로 중앙 정렬 */
   gap: 20px; /* 이미지 간의 간격 */
   margin: 20px 0; /* 페이지 상단과 하단 여백 */
-}
-
-.body-image-container{
   font-size: 24px;
   font-weight: bold;
-}
-
-.body-image1,
-.record-management-body-image1{
-  border-bottom: 2px solid #3d3d3d;
-}
-
-.body-image2,
-.body-image3,
-.body-image5,
-.body-image6,
-.record-management-body-image2,
-.record-management-body-image3,
-.record-management-body-image4,
-.record-management-body-image6{
-  margin-bottom: 10px;
-}
-
-.body-image4,
-.record-management-body-image5{
-  margin-bottom: -150px;
 }
 
 .body-name{
@@ -650,19 +626,19 @@ em {
 }
 
 
-.body-image-temp5 {
+.body-image5 {
   display: flex; /* 플렉스박스를 사용하여 요소를 가로로 배치 */
   align-items: center; /* 이미지와 텍스트를 수직 가운데 정렬 */
 }
 
 
-.body-image-temp5 body-img2 {
+.body-image5 body-img2 {
   display: inline-block;
   width: 100px; /* 이미지에 고정된 너비 설정 */
   margin-right: 10px; /* 이미지와 텍스트 사이 간격 */
 }
 
-.body-image-temp5 h2 {
+.body-image5 h2 {
   display: inline-block;
   width: 300px; /* 텍스트에 고정된 너비 설정 */
   white-space: nowrap; /* 텍스트가 한 줄로 출력되도록 설정 */
