@@ -10,19 +10,18 @@ body {
   padding-top:70px;
 }
 
+/* 작은 화면(모바일) 대응 */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px; /* 모바일 화면에서 패딩을 60px로 설정 */
+  }
+}
+
 #content {
   flex-grow: 1; /* 콘텐츠가 중간 영역을 채우도록 설정 */
 }
 
-#navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999; /* 다른 요소들 위에 출력되도록 */
-  background-color: white; /* 백그라운드 색상을 추가하여 페이지 내용과 구분 */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 조금 더 보기 좋게 그림자 추가 */
-}
+
 
 
 img {
@@ -34,6 +33,16 @@ img {
 
 
 /* ---------------------------navbar.html-------------------------------------- */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* 다른 요소들 위에 출력되도록 */
+  background-color: white; /* 백그라운드 색상을 추가하여 페이지 내용과 구분 */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 조금 더 보기 좋게 그림자 추가 */
+}
+
 nav {
   background-color: #ffffff;
   padding: 10px;
@@ -134,23 +143,63 @@ nav ul li a:hover {
 .menu-item {
   width: auto; /* menu-item의 너비를 자동으로 설정 */
 }
+/* 작은 화면(모바일) 대응 */
+@media (max-width: 768px) {
+  #navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    align-items: center;
+    margin: 0 auto; /* 중앙에 배치 */
+    padding-left: 5%; /* 왼쪽에 여백 추가 */
+    width : 100%;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-start; /* 메뉴 항목도 왼쪽 정렬 */
+  }
+
+  nav ul li {
+    padding: 0; /* 패딩을 0으로 설정 */
+  }
+
+  .navbar-logo {
+    display: none; /* 모바일 화면에서 로고 숨기기 */
+  }
+
+  .menu-item {
+    width: auto; /* 메뉴 항목 너비 자동 조정 */
+    text-align: center;
+  }
+
+  .menu-item a {
+    font-size: 14px;
+  }
+
+  .nav-submenu {
+    display: none; /* 모바일에서 서브메뉴 숨김 */
+  }
+}
+
 
 
 
 /* ---------------------------bottom-banner.html-------------------------------------- */
+/* 기본 bottom-banner 스타일 */
 .bottom-banner {
-  position: relative; /* 고정하지 않고, 페이지 하단에 자연스럽게 위치 */
-  width: 100%; /* 화면 너비에 맞춤 */
+  position: relative;
+  width: 100%;
   background: #333;
   font-family: "MalGun Gothic", 맑은고딕, dotum;
-  padding: 20px 0; /* 상하단 여백 추가 */
+  padding: 20px 0;
   color: white;
-
 }
 
 /* 오시는 길 | Q&A 링크 영역 스타일 */
 .bottom-link-row {
-  padding-left: 463px;
+  text-align: center;
+  padding-left: 1%;
 }
 
 .link-list {
@@ -160,8 +209,8 @@ nav ul li a:hover {
 }
 
 .link-list li {
-  display: inline-block; /* 인라인 블록으로 설정 */
-  margin: 0; /* 간격 없애기 */
+  display: inline-block;
+  margin: 0;
 }
 
 .link-list li a {
@@ -170,13 +219,13 @@ nav ul li a:hover {
   font-size: 16px;
 }
 
-.link-list span{
+.link-list span {
   color: #929292;
 }
 
 .link-list li a:hover {
-  text-decoration: underline; /* 호버 시 밑줄 표시 */
-  color: #ffffff; /* 호버 시 글씨 색상을 하얀색으로 설정 */
+  text-decoration: underline;
+  color: #ffffff;
 }
 
 /* 구분선 스타일 */
@@ -187,19 +236,21 @@ nav ul li a:hover {
   border-top: 1px solid #555;
 }
 
+/* bottom_nav 이미지 위치 */
 .bottom_nav {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  z-index: 9999; /* 다른 요소들 위에 표시되도록 z-index를 더 높임 */
+  z-index: 9999;
   width: 150px;
   height: auto;
   display: none;
 }
 
+/* bottom-row 스타일 */
 .bottom-row {
   position: relative;
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -210,28 +261,59 @@ nav ul li a:hover {
   font-weight: normal;
   padding-left: 150px;
   overflow: hidden;
-  display: flex; /* Flexbox로 좌우 배치 */
-  justify-content: space-between; /* 좌우로 공간을 균등하게 분배 */
-  align-items: flex-start; /* 두 열의 상단을 정렬 */
-  padding: 10px; /* 상하좌우 여백 */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
 }
 
 .left-column {
   color: white;
   font-weight: bold;
-  width: 25%; /* 원하는 너비 설정 */
+  width: 43%;
+  padding-right: 3%;
+  text-align: right;
 }
 
 .right-column {
   font-size: 16px;
   color: #999;
   line-height: 1.8;
-  width: 75%; /* 원하는 너비 설정 */
+  width: 53%;
+  padding-left: 1%;
+  text-align: left;
 }
 
 .bottom-row-flex strong {
   color: white;
   font-size: 22px;
+}
+
+
+/* 작은 화면(모바일) 대응 */
+@media (max-width: 768px) {
+  .bottom-link-row{
+    padding-bottom: 2%;
+  }
+  .bottom-banner {
+    padding: 1%;
+  }
+  .separator{
+    margin: 0px;
+  }
+  .bottom-row-flex{
+    padding: 1%;
+  }
+  .link-list li a {
+    font-size: 10px;
+  }
+  .left-column{
+    display:none;
+  }
+  .right-column{
+    width: 100%;
+    font-size: 10px;
+  }
 }
 
 
@@ -398,37 +480,45 @@ nav ul li a:hover {
 
 /* 작은 화면(모바일) 대응 */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  .navbar-logo {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .navbar-sorting {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-
   .main-image {
     max-height: 50vh;
   }
 
   .button-container {
-    flex-direction: column;
+    left: auto; /* 모바일에서 left 제거 */
+    gap: 10px; /* 모바일에서 gap을 0으로 설정 */
+    transform: translate(0, -50%); /* 중앙 정렬을 위한 transform 수정 */
+    flex-wrap: wrap;
+  }
+
+  .button-item{
+    width: auto;
+    height: auto;
+    white-space: nowrap;
   }
 
   .image-button {
     padding: 10px 15px;
     font-size: 14px;
   }
+
+  .image-text1, .image-text2 {
+    top: 25%; /* 모바일에서 top 값을 10%로 설정 */
+  }
+
+  /* image-text1과 image-text2의 폰트 크기 조정 */
+  .image-text1 p, .image-text2 p {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .image-text1 h1, .image-text2 h1 {
+    font-size: 22px;
+    white-space: nowrap;
+  }
+
 }
+
 
 
 /* ---------------------------map.html-------------------------------------- */
@@ -496,7 +586,6 @@ nav ul li a:hover {
   margin: 0 auto;
   width: 80%; /* 컨테이너의 고정된 너비 설정 */
   max-width: 1200px; /* 최대 너비 설정 */
-  padding-bottom: 100px;
 }
 
 /* map-page 이미지 */
@@ -507,13 +596,6 @@ nav ul li a:hover {
   margin-bottom: 20px; /* 이미지 아래에 간격 추가 */
 }
 
-.map-name {
-  font-size: 24px;
-  margin-bottom: 10px; /* map-address와의 간격 추가 */
-  color: #333;
-  text-align: left;
-  width: 100%; /* 부모의 너비에 맞춤 */
-}
 
 /* map-info의 레이아웃 설정 */
 .map-info {
@@ -521,13 +603,18 @@ nav ul li a:hover {
   justify-content: space-between; /* 텍스트와 버튼 사이 간격 설정 */
   align-items: center; /* 텍스트와 버튼을 중앙 정렬 */
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 10%;
 }
 
 .map-text {
   display: flex;
   flex-direction: column; /* 주소와 전화번호를 세로로 배치 */
   justify-content: flex-start;
+  font-weight: bold;
+}
+
+.map-address{
+  font-size: 18px; /* 주소의 글자 크기 설정 */  
 }
 
 .map-address,
@@ -556,6 +643,54 @@ nav ul li a:hover {
 
 .map-button:hover {
   background-color: #1e5bb3; /* 호버 시 약간 어두운 파란색 */
+}
+
+/* 작은 화면(모바일) 대응 */
+@media (max-width: 768px) {
+  .page-description-image {
+    height: auto; /* 이미지의 높이를 자동으로 설정 */
+    display: flex;
+    justify-content: center; /* 이미지 내부 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+  }
+
+  .page-image-container .image-text p{
+    font-size: 8px;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    margin: 0px;
+  }
+  .page-image-container .image-text h1{
+    font-size: 20px;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    margin: 0px;
+  }
+
+  .map-image{
+    margin-bottom: 0px;
+  }
+  .map-info {
+    flex-direction: column; /* 모바일에서 세로로 배치 */
+    align-items: flex-start;
+    
+  }
+  .map-text{
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    font-weight: bold;
+    
+  }
+  .map-address{
+    font-size: 12px; /* 주소의 글자 크기 설정 */
+  }
+  .map-tel{
+    font-size: 12px; /* 전화번호의 글자 크기 설정 */
+  }
+
+  .map-button{
+    font-size: 14px;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    transform: scale(0.8); /* 크기를 80%로 줄임 */
+    margin: 10px auto; /* 버튼을 중앙에 정렬 */
+  }
 }
 
 /* ------------------- highschool/university -------------------------------------- */
@@ -645,6 +780,38 @@ em {
   text-align: left; /* 텍스트를 왼쪽 정렬 */
 }
 
+@media (max-width: 768px) {
+  .consulting-list li {
+    font-size: 10px;
+    padding: 5px 5px;
+  }
+  
+  .body-name h1 {
+    font-size: 20px;
+  }
+  
+  .body-name p {
+    font-size: 12px;
+  }
+
+  /* 이미지 크기 조정 */
+  .body-image-container .body-img {
+    width: 100%; /* 이미지가 화면 너비에 맞도록 설정 */
+    max-width: 100%; /* 이미지의 최대 너비를 100%로 제한 */
+    height: auto; /* 이미지 비율을 유지하면서 높이를 자동으로 설정 */
+  }
+
+  .body-image-container .body-image5 .body-img1,
+  .body-image-container .body-image5 .body-img2 {
+    width: 100%; /* 이미지가 모바일 화면에서 가득 차도록 설정 */
+    max-width: 100%; /* 최대 너비를 100%로 제한 */
+    height: auto; /* 높이는 자동으로 설정하여 이미지 비율 유지 */
+  }
+
+  .body-image-container {
+    gap: 10px; /* 이미지 간의 간격을 줄임 */
+  }
+}
 
 
 /* ---------------------------frequent-question.html-------------------------------------- */

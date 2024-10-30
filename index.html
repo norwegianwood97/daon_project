@@ -15,10 +15,10 @@
       <div class="image-wrapper">
         <img
           src="/assets/images/main_page/university_image.webp"
-          alt="Main Image2"
-          class="main-image2"
+          alt="Main Image1"
+          class="main-image1"
         />
-        <div class="image-text2">
+        <div class="image-text1">
           <p>차별화된 전략으로 합격까지</p>
           <h1>대학교 입학컨설팅</h1>
         </div>
@@ -46,10 +46,10 @@
       <div class="image-wrapper">
         <img
           src="/assets/images/main_page/highschool_image.webp"
-          alt="Main Image1"
-          class="main-image1"
+          alt="Main Image2"
+          class="main-image2"
         />
-        <div class="image-text1">
+        <div class="image-text2">
           <p>차별화된 전략으로 합격까지</p>
           <h1>고등학교 입학컨설팅</h1>
         </div>
@@ -68,14 +68,8 @@
             <a href="/pages/entrance-highschool/interview.html" class="image-button">면접 컨설팅</a>
           </div>
         </div>
-
       </div>
-
-
-
     </div>
-    
-
 
     <div id="bottom-banner"></div>
 
@@ -94,6 +88,18 @@
           document.getElementById("bottom-banner").innerHTML = data;
         })
         .catch((error) => console.error("Bottom banner fetch error:", error));
+    </script>
+    <script>
+      // image-text1 클릭 시 페이지 이동
+      document.querySelector('.image-text1').addEventListener('click', function() {
+        window.location.href = '/pages/entrance-university/record-analysis.html';
+      });
+    </script>
+    <script>
+      // image-text2 클릭 시 페이지 이동
+      document.querySelector('.image-text2').addEventListener('click', function() {
+        window.location.href = '/pages/entrance-highschool/entrance.html';
+      });
     </script>
   </body>
 </html>
