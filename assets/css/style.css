@@ -13,7 +13,7 @@ body {
 /* 작은 화면(모바일) 대응 */
 @media (max-width: 768px) {
   body {
-    padding-top: 60px; /* 모바일 화면에서 패딩을 60px로 설정 */
+    padding-top: 90px; /* 모바일 화면에서 패딩을 60px로 설정 */
   }
 }
 
@@ -145,19 +145,22 @@ nav ul li a:hover {
 }
 /* 작은 화면(모바일) 대응 */
 @media (max-width: 768px) {
-  #navbar {
+  nav {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start; /* 왼쪽 정렬 */
-    align-items: center;
-    margin: 0 auto; /* 중앙에 배치 */
-    padding-left: 5%; /* 왼쪽에 여백 추가 */
-    width : 100%;
+    flex-direction: column; /* 로고와 메뉴 항목들이 세로로 배치 */
+    align-items: center; /* 중앙 정렬 */
+    width: 100%;
+    padding: 0; /* 여백 제거 */
+  }
+
+  .navbar-logo {
+    display: block; /* 모바일 화면에서 로고 표시 */
   }
 
   nav ul {
-    flex-direction: row;
-    justify-content: flex-start; /* 메뉴 항목도 왼쪽 정렬 */
+    flex-direction: row; /* 메뉴 항목들은 가로로 유지 */
+    justify-content: center; /* 메뉴 항목들을 중앙 정렬 */
+    width: 100%;
   }
 
   nav ul li {
@@ -168,10 +171,6 @@ nav ul li a:hover {
     display:none;
   }
 
-  .navbar-logo {
-    display: none; /* 모바일 화면에서 로고 숨기기 */
-  }
-
   .menu-item {
     width: auto; /* 메뉴 항목 너비 자동 조정 */
     text-align: center;
@@ -179,6 +178,7 @@ nav ul li a:hover {
 
   .menu-item a {
     font-size: 14px;
+    text-align: center;
   }
 
   .nav-submenu {
