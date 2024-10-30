@@ -164,6 +164,10 @@ nav ul li a:hover {
     padding: 0; /* 패딩을 0으로 설정 */
   }
 
+  nav ul li ul {
+    display:none;
+  }
+
   .navbar-logo {
     display: none; /* 모바일 화면에서 로고 숨기기 */
   }
@@ -236,8 +240,8 @@ nav ul li a:hover {
   border-top: 1px solid #555;
 }
 
-/* bottom_nav 이미지 위치 */
-.bottom_nav {
+/* bottom_nav_icon 이미지 위치 */
+.bottom_nav_icon {
   position: fixed;
   bottom: 10px;
   right: 10px;
@@ -313,6 +317,9 @@ nav ul li a:hover {
   .right-column{
     width: 100%;
     font-size: 10px;
+  }
+  .bottom_nav_icon{
+    width: 25%;
   }
 }
 
@@ -897,4 +904,27 @@ em {
 
 .qa-link:hover{
    background-color: #1e5bb3; /* 호버 시 배경색 변경 */
+}
+
+@media (max-width: 768px) {
+  .question {
+    font-size: 12px;
+  }
+
+  .txt_box {
+    font-size: 10px;
+    padding-left: 10px;
+  }
+  .txt_box a{
+    font-size: 10px;
+  }
+
+  .qa-link{
+    padding: 5px 10px; /* 모바일에서 버튼 내부 여백을 줄임 */
+  }
+
+  .faq-image1 {
+    max-width: 100%;
+    height: auto;
+  }
 }
