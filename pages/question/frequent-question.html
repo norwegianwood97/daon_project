@@ -219,5 +219,20 @@
         })
         .catch((error) => console.error("Bottom banner fetch error:", error));
     </script>
+    <script>
+      // Select all the question elements
+      const questions = document.querySelectorAll(".question");
+      questions.forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqContent = question.nextElementSibling;
+          // Toggle the display of the faq content
+          if (faqContent.style.display === "block") {
+            faqContent.style.display = "none";
+          } else {
+            faqContent.style.display = "block";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
