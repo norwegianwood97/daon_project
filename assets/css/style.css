@@ -190,7 +190,8 @@ nav ul li a:hover {
   }
 
   .nav-submenu {
-    display: none; /* 모바일에서 서브메뉴 숨김 */
+    display: none !important; /* 모바일에서 서브메뉴를 강제로 숨김 */
+    pointer-events: none; /* 서브메뉴 클릭을 방지 */
   }
 }
 

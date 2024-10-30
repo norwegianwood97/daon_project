@@ -161,7 +161,23 @@
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
+          
+          // 모바일 서브메뉴 비활성화 스크립트
+          const isMobile = window.matchMedia("(max-width: 768px)").matches;
+          if (isMobile) {
+            document.querySelectorAll('.menu-item').forEach(function (menuItem) {
+              menuItem.removeEventListener('mouseover', toggleSubmenu);
+              menuItem.removeEventListener('click', toggleSubmenu);
+            });
+          }
         });
+
+      function toggleSubmenu(event) {
+        const submenu = event.currentTarget.querySelector('.nav-submenu');
+        if (submenu) {
+          submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        }
+      }
 
       // bottom-banner.html을 불러오고, 스크롤 이벤트 및 클릭 이벤트 추가
       fetch("../../components/bottom-banner.html")
@@ -202,25 +218,6 @@
           }
         })
         .catch((error) => console.error("Bottom banner fetch error:", error));
-    </script>
-
-    <!-- Add your JavaScript here -->
-    <script>
-      // Select all the question elements
-      const questions = document.querySelectorAll(".question");
-
-      questions.forEach((question) => {
-        question.addEventListener("click", () => {
-          const faqContent = question.nextElementSibling;
-
-          // Toggle the display of the faq content
-          if (faqContent.style.display === "block") {
-            faqContent.style.display = "none";
-          } else {
-            faqContent.style.display = "block";
-          }
-        });
-      });
     </script>
   </body>
 </html>

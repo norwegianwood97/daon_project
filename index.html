@@ -74,32 +74,68 @@
     <div id="bottom-banner"></div>
 
     <script>
-      // navbar.html을 동적으로 불러오기
-      fetch("components/navbar.html")
+      // navbar.html을 불러오는 fetch는 그대로 유지
+      fetch("../../components/navbar.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
+          
+          // 모바일 서브메뉴 비활성화 스크립트
+          const isMobile = window.matchMedia("(max-width: 768px)").matches;
+          if (isMobile) {
+            document.querySelectorAll('.menu-item').forEach(function (menuItem) {
+              menuItem.removeEventListener('mouseover', toggleSubmenu);
+              menuItem.removeEventListener('click', toggleSubmenu);
+            });
+          }
         });
-    </script>
-    <script>
+
+      function toggleSubmenu(event) {
+        const submenu = event.currentTarget.querySelector('.nav-submenu');
+        if (submenu) {
+          submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        }
+      }
+
+      // bottom-banner.html을 불러오고, 스크롤 이벤트 및 클릭 이벤트 추가
       fetch("../../components/bottom-banner.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("bottom-banner").innerHTML = data;
+
+          // bottom-banner가 로드된 후에 클릭 및 스크롤 이벤트를 추가
+          const bottomNav = document.getElementById("bottomNav");
+
+          if (!bottomNav) {
+            console.error("이미지를 찾을 수 없습니다.");
+          } else {
+            console.log("이미지 요소를 찾았습니다.");
+
+            // 클릭 이벤트 리스너 추가
+            bottomNav.addEventListener("click", function () {
+              console.log("이미지 클릭됨");
+              window.scrollTo({
+                top: 0, // 최상단 위치
+                behavior: "smooth", // 부드럽게 스크롤
+              });
+            });
+
+            // 스크롤 이벤트 추가: 스크롤 위치에 따라 bottomNav 표시/숨김
+            window.onscroll = function () {
+              if (window.scrollY > 100) {
+                bottomNav.style.display = "block"; // 스크롤이 일정 수준 넘으면 보이게 설정
+              } else {
+                bottomNav.style.display = "none"; // 상단에 있을 땐 숨김
+              }
+            };
+
+            // 페이지 로드 시 상단에 있으면 이미지를 숨김
+            if (window.scrollY <= 100) {
+              bottomNav.style.display = "none";
+            }
+          }
         })
         .catch((error) => console.error("Bottom banner fetch error:", error));
-    </script>
-    <script>
-      // image-text1 클릭 시 페이지 이동
-      document.querySelector('.image-text1').addEventListener('click', function() {
-        window.location.href = '/pages/entrance-university/record-analysis.html';
-      });
-    </script>
-    <script>
-      // image-text2 클릭 시 페이지 이동
-      document.querySelector('.image-text2').addEventListener('click', function() {
-        window.location.href = '/pages/entrance-highschool/entrance.html';
-      });
     </script>
   </body>
 </html>
