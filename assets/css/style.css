@@ -168,9 +168,16 @@ nav ul li a:hover {
     padding: 0; /* 패딩을 0으로 설정 */
   }
 
-  nav ul li ul {
-    display:none;
+ 
+  nav ul li ul.nav-submenu {
+    display: none !important; /* 서브메뉴를 강제로 숨김 */
+    pointer-events: none; /* 클릭 및 상호작용 차단 */
   }
+
+  .menu-item:hover .nav-submenu {
+    display: none !important; /* hover 시에도 서브메뉴 출력 차단 */
+  }
+  
 
   .menu-item {
     width: auto; /* 메뉴 항목 너비 자동 조정 */
