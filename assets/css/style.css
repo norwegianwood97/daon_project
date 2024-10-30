@@ -51,7 +51,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* 네비게이션 바 로고 설정 */
@@ -776,13 +777,13 @@ em {
 
 .body-image5 body-img2 {
   display: inline-block;
-  width: 100px; /* 이미지에 고정된 너비 설정 */
+  width: 100%; /* 이미지에 고정된 너비 설정 */
   margin-right: 10px; /* 이미지와 텍스트 사이 간격 */
 }
 
 .body-image5 h2 {
   display: inline-block;
-  width: 300px; /* 텍스트에 고정된 너비 설정 */
+  width: 100%; /* 텍스트에 고정된 너비 설정 */
   white-space: nowrap; /* 텍스트가 한 줄로 출력되도록 설정 */
   text-align: left; /* 텍스트를 왼쪽 정렬 */
 }
@@ -799,6 +800,19 @@ em {
   
   .body-name p {
     font-size: 12px;
+  }
+
+  .img {
+    width: 100%; /* 이미지가 부모 요소를 넘지 않도록 설정 */
+    height: auto; /* 비율에 맞춰 높이 자동 조정 */
+  }
+
+  @media (max-width: 768px) {
+    .body-image5 img {
+      width: 100%; /* 화면 너비에 맞춰 이미지 크기 조정 */
+      max-width: 100%; /* 최대 너비를 다른 이미지들과 동일하게 384px로 제한 */
+      height: auto; /* 높이는 비율에 따라 자동으로 조정 */
+    }
   }
 
   /* 이미지 크기 조정 */
@@ -818,6 +832,8 @@ em {
   .body-image-container {
     gap: 10px; /* 이미지 간의 간격을 줄임 */
   }
+
+
 }
 
 
