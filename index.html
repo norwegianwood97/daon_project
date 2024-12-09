@@ -136,6 +136,9 @@
           }
         })
         .catch((error) => console.error("Bottom banner fetch error:", error));
+      if (window.location.pathname !== '/index') {
+        window.location.href = '/index';
+      }
     </script>
   </body>
 </html>
