@@ -536,8 +536,31 @@ nav ul li a:hover {
 }
 
 
+/*-----------------------------------------------center.html------------------------------------------------------------------------------------------------------------------------------- */
+#center-description-text {
+  max-width: 1150px; /* 콘텐츠의 가로폭 제한 */
+  margin: 40px auto; /* 주변 요소들과 조화롭게 간격 조정 */
+  padding: 30px; /* 여백 확대 */
+  background-color: #ffffff; /* 배경을 밝고 깔끔하게 변경 */
+  border: 1px solid #e0e0e0; /* 테두리 색상 밝게 설정 */
+  border-radius: 15px; /* 모서리를 부드럽게 둥글게 */
+  font-family: 'Helvetica Neue', sans-serif; /* 고급스러운 폰트 사용 */
+  font-weight: 550; /* 가벼운 느낌을 위한 폰트 두께 설정 */
+  line-height: 1.8; /* 텍스트 간격을 넓혀 가독성 향상 */
+  text-align: justify; /* 양쪽 정렬 */
+}
 
-/* ---------------------------map.html-------------------------------------- */
+#center-description-text p {
+  margin-bottom: 15px; /* 문단 간격을 넓혀 가독성 향상 */
+  color: #333333; /* 진한 회색 글자 색상 */
+  font-size: 18px; /* 텍스트 크기 증가 */
+  letter-spacing: 0.5px; /* 글자 간격 조정 */
+}
+
+#center-description-text p:last-of-type {
+  margin-bottom: 0; /* 마지막 문단 간격 제거 */
+}
+
 .page-image-container {
   position: relative; /* 자식 요소를 이미지 위에 배치하기 위해 relative 사용 */
   display: inline-block;
@@ -586,7 +609,6 @@ nav ul li a:hover {
   z-index: 1; /* 이미지 위에 레이어를 덮기 위해 z-index를 설정 */
 }
 
-/* ----------------------------오시는 길 페이지---------------------------------- */
 .map-page-image {
   display: block;
   margin: 0 auto;
