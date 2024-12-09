@@ -27,7 +27,7 @@
 
     <div>
       <ul class="consulting-list">
-        <li class="selected">
+        <li>
           <a href="entrance.html">
             <span>
               <em>진학 컨설팅</em>
@@ -35,20 +35,20 @@
           </a>
         </li>
         <li>
-          <a href="student-record.html">
+          <a href="st-record.html">
             <span>
               <em>생기부 컨설팅</em>
             </span>
           </a>
         </li>
         <li>
-          <a href="self-introduction.html">
+          <a href="cv-letter.html">
             <span>
               <em>자소서 컨설팅</em>
             </span>
           </a>
         </li>
-        <li>
+        <li class="selected">
           <a href="interview.html">
             <span>
               <em>면접 컨설팅</em>
@@ -59,43 +59,42 @@
     </div>
 
     <div class="body-name">
-        <h1>"진학 컨설팅"</h1> 
-        <p><strong>고등학교 진학은 학생의 학업 및 진로 설계의 중요한 출발점입니다. <br>학생의 학업 성적, 특기, 진로 희망 등을 고려하여 <br>적합한 고등학교를 선택할 수 있도록 전문적인 컨설팅을 제공합니다.</strong></p>
-    </div>
+      <h1>"면접 컨설팅"</h1> 
+      <p><strong>고입 최종 합격을 결정짓는 중요한 단계, 면접. <br>학교별 요구하는 인재상과 역량에 맞춘 맞춤형 면접 준비를 지원합니다.</strong></p>  
+  </div>
 
     <div class="body-image-container">
-
       <div class="body-image2">
         <img
-          src="../../assets/images/highschool/entrance/2.PNG"
+          src="../../assets/images/highschool/interview/2.PNG"
           alt="body-img2"
           class="body-img"
         />
       </div>
       <div class="body-image3">
         <img
-          src="../../assets/images/highschool/entrance/3.PNG"
+          src="../../assets/images/highschool/interview/3.PNG"
           alt="body-img3"
           class="body-img"
         />
       </div>
       <div>
         <img
-            src="../../assets/images/highschool/entrance/3-2.PNG"
+            src="../../assets/images/highschool/interview/3-2.PNG"
             alt="body-img3-2"
             class="body-img"
         />
       </div>
       <div class="body-image4">
         <img
-          src="../../assets/images/highschool/entrance/4.PNG"
+          src="../../assets/images/highschool/interview/4.PNG"
           alt="body-img4"
           class="body-img"
         />
       </div>
       <div>
         <img
-          src="../../assets/images/highschool/entrance/4-2.PNG"
+          src="../../assets/images/highschool/interview/4-2.PNG"
           alt="body-img4-2"
           class="body-img"
         />
@@ -103,14 +102,14 @@
       <br>
       <div class="body-image5">
         <img
-          src="../../assets/images/highschool/entrance/5.PNG"
+          src="../../assets/images/highschool/interview/5.PNG"
           alt="body-img5"
           class="body-img1"
         />
       </div>
       <div class="body-image5">
         <img
-          src="../../assets/images/highschool/entrance/5-2.PNG"
+          src="../../assets/images/highschool/interview/5-2.PNG"
           alt="body-img5-1"
           class="body-img2"
         />
@@ -182,6 +181,9 @@
           }
         })
         .catch((error) => console.error("Bottom banner fetch error:", error));
+      if (window.location.pathname !== '/consulting/highschool/interview') {
+        window.location.href = '/consulting/highschool/interview';
+      }
     </script>
   </body>
 </html>

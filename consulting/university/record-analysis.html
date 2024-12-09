@@ -32,7 +32,7 @@
 
     <div>
       <ul class="consulting-list">
-        <li>
+        <li class="selected">
           <a href="record-analysis.html">
             <span>
               <em>생기부 분석</em>
@@ -53,7 +53,7 @@
             </span>
           </a>
         </li>
-        <li class="selected">
+        <li>
           <a href="interview.html">
             <span>
               <em>면접 컨설팅</em>
@@ -71,42 +71,42 @@
     </div>
 
     <div class="body-name">
-      <h1>"면접 컨설팅"</h1> 
-      <p><strong>학교별 면접에 대한 깊은 이해를 바탕으로 <br>학생의 개인 역량에 맞춘 맞춤형 면접 자료를 제공합니다. <br>빈출 질문과 평가 요소를 분석하여 철저히 진행합니다.</strong></p>  
+      <h1>"생활기록부 분석 컨설팅"</h1> 
+      <p><strong>교과 및 비교과 활동을 정밀 분석하여 <br>학생의 진학 목표에 맞는 맞춤형 입시 전략을 제시합니다. <br>각종 기록을 통해 학교에서 원하는 인재상을 부각시킵니다.</strong></p>  
   </div>
 
     <div class="body-image-container">
       <div class="body-image2">
         <img
-          src="../../assets/images/university/interview/2.PNG"
+          src="../../assets/images/university/record-analysis/2.PNG"
           alt="body-img2"
           class="body-img"
         />
       </div>
       <div class="body-image3">
         <img
-          src="../../assets/images/university/interview/3.PNG"
+          src="../../assets/images/university/record-analysis/3.PNG"
           alt="body-img3"
           class="body-img"
         />
       </div>
       <div>
         <img
-            src="../../assets/images/university/interview/3-2.PNG"
+            src="../../assets/images/university/record-analysis/3-2.PNG"
             alt="body-img3-2"
             class="body-img"
         />
       </div>
       <div class="body-image4">
         <img
-          src="../../assets/images/university/interview/4.PNG"
+          src="../../assets/images/university/record-analysis/4.PNG"
           alt="body-img4"
           class="body-img"
         />
       </div>
-      <div>
+      <div class="body-image4-2">
         <img
-          src="../../assets/images/university/interview/4-2.PNG"
+          src="../../assets/images/university/record-analysis/4-2.PNG"
           alt="body-img4-2"
           class="body-img"
         />
@@ -114,14 +114,14 @@
       <br>
       <div class="body-image5">
         <img
-          src="../../assets/images/university/interview/5.PNG"
+          src="../../assets/images/university/record-analysis/5.PNG"
           alt="body-img5"
           class="body-img1"
         />
       </div>
-      <div class="body-image5">
+      <div class="body-image5-2">
         <img
-          src="../../assets/images/university/interview/5-2.PNG"
+          src="../../assets/images/university/record-analysis/5-2.PNG"
           alt="body-img5-1"
           class="body-img2"
         />
@@ -197,5 +197,8 @@
           }
         })
         .catch((error) => console.error("Bottom banner fetch error:", error));
+      if (window.location.pathname !== '/consulting/university/record-analysis') {
+        window.location.href = '/consulting/university/record-analysis';
+      }
     </script>
     

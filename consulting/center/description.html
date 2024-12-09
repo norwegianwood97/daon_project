@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>다온 입시컨설팅센터</title>
@@ -13,110 +14,58 @@
     <!-- 페이지 이미지 출력 -->
     <div class="page-image-container">
       <img
-      src="../../assets/images/highschool/main_image.PNG"
-      alt="page Description"
+      src="../../assets/images/center_description/main_image.PNG"
+      alt="page description"
       class="page-description-image"
-    />
-
+      />
       <div class="image-text">
         <p>차별화된 전략으로 합격까지</p>
-        <h1>고입컨설팅</h1>
+        <h1>센터안내</h1>
         <p>시작부터 합격까지, 맞춤형 컨설팅으로 완벽하게</p>
       </div>
     </div>
 
     <div>
       <ul class="consulting-list">
-        <li>
-          <a href="entrance.html">
-            <span>
-              <em>진학 컨설팅</em>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="student-record.html">
-            <span>
-              <em>생기부 컨설팅</em>
-            </span>
-          </a>
-        </li>
         <li class="selected">
-          <a href="self-introduction.html">
+          <a href="center.html">
             <span>
-              <em>자소서 컨설팅</em>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="interview.html">
-            <span>
-              <em>면접 컨설팅</em>
+              <em>센터 안내</em>
             </span>
           </a>
         </li>
       </ul>
     </div>
 
-    <div class="body-name">
-      <h1>"자소서 컨설팅"</h1> 
-      <p><strong>자기소개서는 학생의 개성과 잠재력을 보여주는 중요한 서류입니다. <br>학생의 강점, 성장 배경, 입학 의지 등을 효과적으로 드러내어 <br>학교에서 원하는 인재임을 입증할 수 있도록 돕습니다.</strong></p>  
-  </div>
-
-    <div class="body-image-container">
-
-      <div class="body-image2">
-        <img
-          src="../../assets/images/highschool/selfintro/2.PNG"
-          alt="body-img2"
-          class="body-img"
-        />
-      </div>
-      <div class="body-image3">
-        <img
-          src="../../assets/images/highschool/selfintro/3.PNG"
-          alt="body-img3"
-          class="body-img"
-        />
-      </div>
-      <div>
-        <img
-            src="../../assets/images/highschool/selfintro/3-2.PNG"
-            alt="body-img3-2"
-            class="body-img"
-        />
-      </div>
-      <div class="body-image4">
-        <img
-          src="../../assets/images/highschool/selfintro/4.PNG"
-          alt="body-img4"
-          class="body-img"
-        />
-      </div>
-      <div>
-        <img
-          src="../../assets/images/highschool/selfintro/4-2.PNG"
-          alt="body-img4-2"
-          class="body-img"
-        />
-      </div>
-      <br>
-      <div class="body-image5">
-        <img
-          src="../../assets/images/highschool/selfintro/5.PNG"
-          alt="body-img5"
-          class="body-img1"
-        />
-      </div>
-      <div class="body-image5">
-        <img
-          src="../../assets/images/highschool/selfintro/5-2.PNG"
-          alt="body-img5-1"
-          class="body-img2"
-        />
-        </div>
-        <br>
+    <div id="center-description-text">
+      <p>
+        다온입시컨설팅은 학생의 입시 나침반이 되어 가장 유리한 전형을 찾아내고, 그에 적합한 입시 전략을 수립합니다. 이에 맞춰 학생의 꿈과 능력을 반영한 맞춤형 합격 포트폴리오를 설계하며, 동아리, 진로, 독서 등 학생부의 모든 항목을 철저히 관리합니다.
+      </p>
+      <p>
+        고입·대입 자소서 작성과 실전 면접까지의 전 과정을 1:1 밀착 지도로 지원하며, 최종 합격의 순간까지 함께 하겠습니다. 분야별 전문 컨설턴트와 체계적인 관리 프로그램을 통해 귀 자녀가 미래를 선도하는 인재로 성장할 수 있도록 최선을 다하겠습니다.
+      </p>
     </div>
+
+    <div class="map-container">
+      <img
+        src="../../assets/images/center_description/center/destination.PNG"
+        alt="Center Description"
+        class="map-image"
+      />
+
+      <!-- 주소와 전화번호 및 버튼을 감싸는 컨테이너 -->
+      <div class="map-info">
+        <div class="map-text">
+          <div class="map-address">경기 김포시 유현로 242 신유베라트 3층</div>
+          <div class="map-tel">TEL. 031-8049-0807</div>
+        </div>
+        <div class="map-button">
+          <a href="https://naver.me/5Gyv9pmR" target="_blank">지도 크게 보기</a>
+        </div>
+      </div>
+    </div>
+
+
     <div id="bottom-banner"></div>
 
     <script>
@@ -182,6 +131,10 @@
           }
         })
         .catch((error) => console.error("Bottom banner fetch error:", error));
+
+      if (window.location.pathname !== '/consulting/center/description') {
+        window.location.href = '/consulting/center/description';
+      }
     </script>
   </body>
 </html>

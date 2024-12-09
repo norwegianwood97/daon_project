@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="/../../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>다온 입시컨설팅센터</title>
-    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../../assets/css/style.css" />
   </head>
   <body>
     <div id="navbar"></div>
 
+
     <!-- 페이지 이미지 출력 -->
     <div class="page-image-container">
       <img
-      src="../../assets/images/highschool/main_image.PNG"
-      alt="page Description"
+      src="../../../assets/images/university/main_image.PNG"
+      alt="page description"
       class="page-description-image"
-    />
+      />
 
       <div class="image-text">
         <p>차별화된 전략으로 합격까지</p>
-        <h1>고입컨설팅</h1>
+        <h1>대입컨설팅</h1>
         <p>시작부터 합격까지, 맞춤형 컨설팅으로 완벽하게</p>
       </div>
     </div>
@@ -28,23 +33,23 @@
     <div>
       <ul class="consulting-list">
         <li>
-          <a href="entrance.html">
+          <a href="record-analysis.html">
             <span>
-              <em>진학 컨설팅</em>
-            </span>
-          </a>
-        </li>
-        <li class="selected">
-          <a href="student-record.html">
-            <span>
-              <em>생기부 컨설팅</em>
+              <em>생기부 분석</em>
             </span>
           </a>
         </li>
         <li>
-          <a href="self-introduction.html">
+          <a href="record-management.html">
             <span>
-              <em>자소서 컨설팅</em>
+              <em>생기부 관리</em>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="susi.html">
+            <span>
+              <em>수시 컨설팅</em>
             </span>
           </a>
         </li>
@@ -55,47 +60,53 @@
             </span>
           </a>
         </li>
+        <li class="selected">
+          <a href="jungsi.html">
+            <span>
+              <em>정시 컨설팅</em>
+            </span>
+          </a>
+        </li>
       </ul>
     </div>
 
     <div class="body-name">
-        <h1>"생활기록부 컨설팅"</h1> 
-        <p><strong>생활기록부는 학생의 학창시절 활동과 성취를 보여주는 핵심 자료입니다. <br>특색 있는 기록 작성과 체계적인 정리를 통해<br>학교가 원하는 인재로 보일 수 있도록 맞춤형 가이드를 제공합니다.</strong></p>
-      </div>
+      <h1>"정시 컨설팅"</h1> 
+      <p><strong>최근 입시 데이터를 토대로 <br>학생에게 최적화된 정시 지원 전략을 제시합니다. <br>목표 대학과 학과에 맞춘 세부 계획을 수립하여 성공적인 입시를 돕습니다.</strong></p>  
+  </div>
 
     <div class="body-image-container">
-
       <div class="body-image2">
         <img
-          src="../../assets/images/highschool/student-record/2.PNG"
+          src="../../assets/images/university/jungsi/2.PNG"
           alt="body-img2"
           class="body-img"
         />
       </div>
       <div class="body-image3">
         <img
-          src="../../assets/images/highschool/student-record/3.PNG"
+          src="../../assets/images/university/jungsi/3.PNG"
           alt="body-img3"
           class="body-img"
         />
       </div>
       <div>
         <img
-            src="../../assets/images/highschool/student-record/3-2.PNG"
+            src="../../assets/images/university/jungsi/3-2.PNG"
             alt="body-img3-2"
             class="body-img"
         />
       </div>
       <div class="body-image4">
         <img
-          src="../../assets/images/highschool/student-record/4.PNG"
+          src="../../assets/images/university/jungsi/4.PNG"
           alt="body-img4"
           class="body-img"
         />
       </div>
       <div>
         <img
-          src="../../assets/images/highschool/student-record/4-2.PNG"
+          src="../../assets/images/university/jungsi/4-2.PNG"
           alt="body-img4-2"
           class="body-img"
         />
@@ -103,14 +114,14 @@
       <br>
       <div class="body-image5">
         <img
-          src="../../assets/images/highschool/student-record/5.PNG"
+          src="../../assets/images/university/jungsi/5.PNG"
           alt="body-img5"
           class="body-img1"
         />
       </div>
       <div class="body-image5">
         <img
-          src="../../assets/images/highschool/student-record/5-2.PNG"
+          src="../../assets/images/university/jungsi/5-2.PNG"
           alt="body-img5-1"
           class="body-img2"
         />
@@ -125,38 +136,42 @@
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
-          
-          // 모바일 서브메뉴 비활성화 스크립트
+    
+          // 모바일에서 서브메뉴 비활성화
           const isMobile = window.matchMedia("(max-width: 768px)").matches;
           if (isMobile) {
             document.querySelectorAll('.menu-item').forEach(function (menuItem) {
-              menuItem.removeEventListener('mouseover', toggleSubmenu);
-              menuItem.removeEventListener('click', toggleSubmenu);
+              const submenu = menuItem.querySelector('.nav-submenu');
+              if (submenu) {
+                // 서브메뉴를 비활성화
+                submenu.style.display = 'none';
+              }
+    
+              // 상위 메뉴를 클릭하면 페이지가 정상적으로 이동하도록 설정
+              menuItem.querySelector('a').addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href) {
+                  window.location.href = href;  // 페이지 이동
+                }
+              });
             });
           }
         });
-
-      function toggleSubmenu(event) {
-        const submenu = event.currentTarget.querySelector('.nav-submenu');
-        if (submenu) {
-          submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-        }
-      }
-
+    
       // bottom-banner.html을 불러오고, 스크롤 이벤트 및 클릭 이벤트 추가
       fetch("../../components/bottom-banner.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("bottom-banner").innerHTML = data;
-
+    
           // bottom-banner가 로드된 후에 클릭 및 스크롤 이벤트를 추가
           const bottomNav = document.getElementById("bottomNav");
-
+    
           if (!bottomNav) {
             console.error("이미지를 찾을 수 없습니다.");
           } else {
             console.log("이미지 요소를 찾았습니다.");
-
+    
             // 클릭 이벤트 리스너 추가
             bottomNav.addEventListener("click", function () {
               console.log("이미지 클릭됨");
@@ -165,7 +180,7 @@
                 behavior: "smooth", // 부드럽게 스크롤
               });
             });
-
+    
             // 스크롤 이벤트 추가: 스크롤 위치에 따라 bottomNav 표시/숨김
             window.onscroll = function () {
               if (window.scrollY > 100) {
@@ -174,7 +189,7 @@
                 bottomNav.style.display = "none"; // 상단에 있을 땐 숨김
               }
             };
-
+    
             // 페이지 로드 시 상단에 있으면 이미지를 숨김
             if (window.scrollY <= 100) {
               bottomNav.style.display = "none";
@@ -182,6 +197,8 @@
           }
         })
         .catch((error) => console.error("Bottom banner fetch error:", error));
+      if (window.location.pathname !== '/consulting/university/jungsi') {
+        window.location.href = '/consulting/university/jungsi';
+      }
     </script>
-  </body>
-</html>
+    

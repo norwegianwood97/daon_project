@@ -14,7 +14,6 @@
   <body>
     <div id="navbar"></div>
 
-
     <!-- 페이지 이미지 출력 -->
     <div class="page-image-container">
       <img
@@ -29,17 +28,18 @@
         <p>시작부터 합격까지, 맞춤형 컨설팅으로 완벽하게</p>
       </div>
     </div>
+    
 
     <div>
       <ul class="consulting-list">
-        <li class="selected">
+        <li>
           <a href="record-analysis.html">
             <span>
               <em>생기부 분석</em>
             </span>
           </a>
         </li>
-        <li>
+        <li class="selected">
           <a href="record-management.html">
             <span>
               <em>생기부 관리</em>
@@ -71,42 +71,49 @@
     </div>
 
     <div class="body-name">
-      <h1>"생활기록부 분석 컨설팅"</h1> 
-      <p><strong>교과 및 비교과 활동을 정밀 분석하여 <br>학생의 진학 목표에 맞는 맞춤형 입시 전략을 제시합니다. <br>각종 기록을 통해 학교에서 원하는 인재상을 부각시킵니다.</strong></p>  
+      <h1>"생활기록부 관리 컨설팅"</h1> 
+      <p><strong>대학별 평가 요소를 고려해 기록을 보완하고 개선하여, <br>학생의 고유한 스토리가 담긴 학교생활기록부를 설계합니다. <br>합격의 가능성을 높이는 강력한 자료로 발전시킵니다.</strong></p>  
   </div>
 
     <div class="body-image-container">
       <div class="body-image2">
         <img
-          src="../../assets/images/university/record-analysis/2.PNG"
+          src="../../assets/images/university/record-management/2.PNG"
           alt="body-img2"
           class="body-img"
         />
       </div>
       <div class="body-image3">
         <img
-          src="../../assets/images/university/record-analysis/3.PNG"
+          src="../../assets/images/university/record-management/3.PNG"
           alt="body-img3"
           class="body-img"
         />
       </div>
-      <div>
+      <div class="body-image3-2">
         <img
-            src="../../assets/images/university/record-analysis/3-2.PNG"
+            src="../../assets/images/university/record-management/3-2.PNG"
             alt="body-img3-2"
+            class="body-img"
+        />
+      </div>
+      <div class="body-image3-3">
+        <img
+            src="../../assets/images/university/record-management/3-3.PNG"
+            alt="body-img3-3"
             class="body-img"
         />
       </div>
       <div class="body-image4">
         <img
-          src="../../assets/images/university/record-analysis/4.PNG"
+          src="../../assets/images/university/record-management/4.PNG"
           alt="body-img4"
           class="body-img"
         />
       </div>
       <div class="body-image4-2">
         <img
-          src="../../assets/images/university/record-analysis/4-2.PNG"
+          src="../../assets/images/university/record-management/4-2.PNG"
           alt="body-img4-2"
           class="body-img"
         />
@@ -114,14 +121,14 @@
       <br>
       <div class="body-image5">
         <img
-          src="../../assets/images/university/record-analysis/5.PNG"
+          src="../../assets/images/university/record-management/5.PNG"
           alt="body-img5"
           class="body-img1"
         />
       </div>
       <div class="body-image5-2">
         <img
-          src="../../assets/images/university/record-analysis/5-2.PNG"
+          src="../../assets/images/university/record-management/5-2.PNG"
           alt="body-img5-1"
           class="body-img2"
         />
@@ -197,5 +204,8 @@
           }
         })
         .catch((error) => console.error("Bottom banner fetch error:", error));
+      if (window.location.pathname !== '/consulting/university/record-management') {
+        window.location.href = '/consulting/university/record-management';
+      }
     </script>
     
